@@ -1,8 +1,6 @@
-# 📱 iOS Zero-Based Development to App Store — Tutorial Code Repository
+# This is the repository for iOS zero-based development to App Store series tutorials
 
-> **This is the repository for iOS zero-based development to App Store series tutorials.**
 
----
 
 ## 🛠 开发环境要求
 
