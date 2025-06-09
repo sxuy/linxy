@@ -1,0 +1,18 @@
+# Xcode
+*.xcworkspace
+*.xcuserdata
+*.xcuserstate
+
+# 构建文件
+DerivedData/
+.build/
+*.ipa
+
+# 包管理
+.swiftpm/
+Packages/
+.package.resolved
+
+# 隐私
+*.env
+.DS_Store
