@@ -11,41 +11,8 @@ import SwiftUI
 struct linxyApp: App {
     var body: some Scene {
         WindowGroup {
-            TabsView()
-        }
-    }
-}
-
-struct TabsView: View {
-    var body: some View {
-        
-        TabView {
             ContentView()
-                .tabItem {
-                    Label("List", systemImage: "bookmark.fill")
-                }
-            SettingsView()
-                .tabItem {
-                    Label("Settings", systemImage: "gearshape.fill")
-                }
         }
-        
-        .modifyBlock {view in
-            if #available(iOS 26.0, *){
-                view.tabBarMinimizeBehavior(.onScrollDown)
-//                    .tabViewBottomAccessory(content: LiquidView)
-            }else {
-                view
-            }
-        }
-    }
-    
-    @ViewBuilder
-    func LiquidView() -> some View {
-        HStack {
-            Text("LiquidGlassTest")
-        }
-        .padding(20)
     }
 }
 
@@ -58,5 +25,5 @@ public extension View {
 
 
 #Preview {
-    TabsView()
+    ContentView()
 }
