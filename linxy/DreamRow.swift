@@ -2,7 +2,7 @@ import SwiftUI
 
 struct DreamRow:  View {
     
-    let dream: Dream
+    @ObservedObject var dream: Dream
     
     var body: some View {
         HStack {
@@ -18,10 +18,17 @@ struct DreamRow:  View {
                 Image(systemName: dream.icon)
                     .foregroundStyle(Color(dream.color))
             }
+            
+            Spacer()
+
+//            if dream.isImportant {
+//                Image(systemName: "star.fill")
+//                    .foregroundColor(.yellow)
+//            }
         }
     }
 }
 
 #Preview {
-    ContentView()
+    DreamRow(dream: Dream(date: "2025/06/01", icon: "moon.stars.fill", content: "Dreamt in peace", title: "Starry Dream", color: .purple, isImportant: true))
 }
